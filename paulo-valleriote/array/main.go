@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func arrSum(arr []int) int {
+func arrSum(arr [5]int) int {
 	sum := 0
 	for _, n := range arr {
 		sum += n
@@ -10,7 +10,7 @@ func arrSum(arr []int) int {
 	return sum
 }
 
-func arrHasNum(target int, arr []int) bool {
+func arrHasNum(target int, arr [4]int) bool {
 	isPresent := false
 	for _, n := range arr {
 		if target == n {
@@ -22,7 +22,7 @@ func arrHasNum(target int, arr []int) bool {
 }
 
 func main() {
-	elementsToSum := []int{8, 6, 3, 7, 1}
+	elementsToSum := [5]int{8, 6, 3, 7, 1}
 	sum := arrSum(elementsToSum)
 	fmt.Println("A soma é igual a:", sum)
 
@@ -30,7 +30,7 @@ func main() {
 	fmt.Println("-----------------")
 	fmt.Print("Qual numero deseja verificar? > ")
 	fmt.Scanf("%d", &targetNumber)
-	arrToSearch := []int{9, 4, 3, 2}
+	arrToSearch := [4]int{9, 4, 3, 2}
 	isPresent := arrHasNum(targetNumber, arrToSearch)
 	if isPresent {
 		fmt.Printf("O número {%d} está presente", targetNumber)
