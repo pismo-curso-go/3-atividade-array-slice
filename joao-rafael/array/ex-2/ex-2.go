@@ -4,15 +4,23 @@ import "fmt"
 
 func main() {
 	numbers := [4]int{1, 2, 3, 4}
-	sum := 0
 
 	var input int
-	fmt.Println("insert a number: ")
+	fmt.Print("insert a number: ")
 	fmt.Scan(&input)
 
+	found := false
 	for _, number := range numbers {
-		sum += number
+		if number == input {
+			found = true
+			break
+		}
 	}
 
-	fmt.Println("sum: ", sum)
+	if !found {
+		fmt.Println("the number was not found in the array")
+		return
+	}
+
+	fmt.Println("the number was found in the array")
 }
