@@ -19,4 +19,11 @@ func main() {
 	names = append(names, name1, name2)
 	fmt.Println("Updated slice:", names)
 
+	//Task 4
+	fmt.Println("------------------------------------------")
+	intSlice := []int{1, 2, 3, 4, 5}
+	fmt.Printf("Slice: %d", intSlice)
+
+	intSlice = append(intSlice[:1], intSlice[2:]...)
+	fmt.Println("\nSlice after removing the second element:", intSlice)
 }
